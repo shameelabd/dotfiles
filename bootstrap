@@ -3,6 +3,9 @@ then
   # Only run nested steps in Spin + shopify/shopify workspaces.
   if [[ "$SPIN_REPO_SOURCE_PATH" = "/src/github.com/shopify/shopify" ]]
   then
-    mv /src/github.com/shopify/shopify/.shopify_config ~/
+    cd "$SPIN_REPO_SOURCE_PATH"
+    cartridge insert shameelabd/returns-team-bootstrap
+    . /cartridges/shopify-reportify-config/setup.sh
+    restart
   fi
 fi
