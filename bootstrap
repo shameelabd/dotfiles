@@ -7,6 +7,7 @@ then
     # This will always be the author of the cartridge, so for the shopify-reportify-config it will be shameelabd
     cartridge insert shameelabd/shopify-reportify-config
     . /cartridges/shopify-reportify-config/setup.sh
+    cp ~/dotfiles/.bashrc ~/.bashrc
 
     restart
   fi
